@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ko'p fanli Quiz Platformasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bosh sahifa -->
+        <div id="home-screen">
+            <h1>Quiz Platformasi</h1>
+            <p class="subtitle">Test ishlamoqchi bo'lgan fanni tanlang (Har bir fan 100 ta savoldan iborat):</p>
+            <div class="btn-group">
+                <button class="main-btn" onclick="startQuiz('informatika')">Informatika (100 ta savol)</button>
+                <button class="main-btn" onclick="startQuiz('matematika')">Matematika (100 ta savol)</button>
+                <button class="main-btn" onclick="startQuiz('tarix')">O'zbekiston Tarixi (100 ta savol)</button>
+            </div>
+        </div>
+
+        <!-- Savollar oynasi -->
+        <div id="quiz-screen" class="hide">
+            <h3 id="subject-title" class="subject-title"></h3>
+            <div class="quiz-info">
+                <span id="question-counter">Savol: 1 / 100</span>
+                <span id="score-display">Ball: 0</span>
+            </div>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+        </div>
+
+        <!-- Natijalar oynasi -->
+        <div id="score-screen" class="hide">
+            <h1>Test Yakunlandi!</h1>
+            <p id="final-score" class="final-score"></p>
+            <button class="main-btn" onclick="goHome()">Asosiy sahifaga qaytish</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
